@@ -2,7 +2,7 @@ import { AlertController } from 'ionic-angular';
 import {Component, OnInit} from '@angular/core';
 import {NavParams} from "ionic-angular";
 
-import { Quote } from '../../data/quote.interface';
+import {Quote} from '../../data/quote.interface';
 import {QuotesService} from "../../services/quotes";
 
 @Component({
@@ -50,6 +50,14 @@ export class QuotesPage implements OnInit{
     });
 
     alert.present();
+  }
+
+  onRemoveFromFavorites(quote: Quote) {
+    this.quotesService.removeQuoteFromFavorites(quote);
+  }
+
+  isFavorite(quote: Quote) {
+    return this.quotesService.isQuoteFavorite(quote);
   }
 
 }
