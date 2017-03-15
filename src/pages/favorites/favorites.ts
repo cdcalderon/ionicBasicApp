@@ -38,7 +38,6 @@ export class FavoritesPage {
 
     this.quotes.splice(position, 1);
   }
-
 }
 
 //ionViewDidLoad  - not executed if page is cached
