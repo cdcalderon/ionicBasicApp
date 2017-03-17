@@ -1,4 +1,5 @@
 import { Component } from '@angular/core';
+import {Toggle} from "ionic-angular";
 
 @Component({
   selector: 'page-settings',
@@ -6,5 +7,7 @@ import { Component } from '@angular/core';
 })
 export class SettingsPage {
 
-  constructor() {}
+  onToggle(toggle: Toggle) {
+    console.log(toggle);
+  }
 }
