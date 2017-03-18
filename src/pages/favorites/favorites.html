@@ -14,7 +14,7 @@
 <ion-content padding>
     <ion-list>
       <ion-item-sliding *ngFor="let quote of quotes">
-        <ion-item color="quoteBackground" (click)="onViewQuote(quote)">
+        <ion-item [color]="getBackground()" (click)="onViewQuote(quote)">
           <h2>{{ quote.person }}</h2>
           <p>{{ quote.text }}</p>
         </ion-item>
